@@ -26,6 +26,8 @@
   --color-12: #f5c044;
   --spacing-horizontal: 1.5rem;
   --spacing-vertical: 1rem;
+  --hero-spacing: 2rem;
+  --hero-img-width: 41rem;
 }
 
 html {
@@ -34,6 +36,10 @@ html {
 }
 
 /* HERO LAYOUT*/
+.hero {
+  max-height: 100vh;
+  overflow: hidden;
+}
 .hero-header {
   display: flex;
   justify-content: space-between;
@@ -41,10 +47,33 @@ html {
   padding: var(--spacing-vertical) 5%;
 }
 .header__buttons {
-  border: 1px solid pink;
   display: flex;
   align-items: center;
   gap: var(--spacing-horizontal);
+}
+.hero__content {
+  margin-left: 5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__content__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hero-spacing);
+}
+.hero__content__buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--hero-spacing);
+}
+.hero__picture {
+  max-width: var(--hero-img-width);
+}
+.hero__img {
+  width: min(100%, var(--hero-img-width));
+  height: auto;
 }
 
 /* MODULES */
