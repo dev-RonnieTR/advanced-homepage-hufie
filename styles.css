@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-size-small: 0.875rem;
+    --font-size-regular: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 2.25rem;
+    --font-size-extralarge: 4rem;
+    --color-1: #295E48;
+    --color-2: #F6F7FB;
+    --color-3: #364153;
+    --color-4: #C9D0DA;
+    --color-5: #6281F7;
+    --color-6: #161739;
+    --color-7: #161739;
+    --color-8: #6D4AE5;
+    --color-9: #263FA9;
+    --color-10: #3C4C98;
+    --color-11: #DEE9FC;
+    --color-12: #F5C044;
+}
+
+html {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* MODULES */
+picture, img {
+    display: block;
+}

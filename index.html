@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="find the fastest way to build and deploy websites using reusable components" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="hero">
+        <header class="header hero-header">
+            <img class="header__logo header__item" src="resources/logo/logo.svg" alt="Hufie Logo">
+            <div class="header__buttons header__item">
+                <a class="header__button login-button button" href="">Log In</a>
+                <a class="header__button signup-button button" href="">Sign Up</a>
+            </div>
+        </header>
+        <div class="hero__content">
+            <div class="hero__content__text">
+                <h1 class="title hero__title">Where data and creativity come together.</h1>
+                <p class="description hero__description">The fastest way to build and deploy websites using reusable
+                    components</p>
+                <div class="hero__content__buttons">
+                    <a class="hero__content__button get-started-button button" href="">GET STARTED</a>
+                    <a href="hero__content__button view-demo-button button">VIEW DEMO</a>
+                </div>
+            </div>
+            <picture>
+                <source srcset="resources/images/hero-image.avif 492w, resources\images\hero-image@2x.avif 656w"
+                    type="image/avif">
+                <source srcset="resources/images/hero-image.webp 492w, resources\images\hero-image@2x.webp 656w"
+                    type="image/webp">
+                <source srcset="resources/images/hero-image.png 492w, resources\images\hero-image@2x.png 656w"
+                    type="image/png">
+                <img src="resources/images/hero-image.png" alt="">
+            </picture>
+        </div>
+    </section>
+    <section class="process">
+        <picture class="process__background">
+            <source srcset="resources/background/section_bg_1.avif  1280w" type="image/avif">
+            <source srcset="resources/background/section_bg_1.webp  1280w" type="image/webp">
+            <source srcset="resources/background/section_bg_1.png   1280w" type="image/png">
+            <img class="process__background__img" src="resources/background/section_bg_1.png" alt="">
+        </picture>
+        <header class="header process__header">
+            <h2 class="title process__title">This is new creative process</h2>
+            <p class="description process__description">Quisque eleifend velit vel erat fringilla interdum</p>
+        </header>
+        <div class="flex-x cards">
+            <div class="flex-x__item card">
+                <p class="emoji card__item">🎨</p>
+                <h3 class="title card__title card__item">200+ cloneable components</h3>
+                <p class="description card__description card__item">Suspendisse id tortor venenatis, blandit lacus ut,
+                    efficitur diam. Proin vulputate nisl vel sem consequat euismod.</p>
+            </div>
+            <div class="flex-x__item card">
+                <p class="emoji card__item">🎯</p>
+                <h3 class="title card__title card__item">Complete style guild for projects</h3>
+                <p class="description card__description card__item">Suspendisse id tortor venenatis, blandit lacus ut,
+                    efficitur diam. Proin vulputate nisl vel sem consequat euismod.</p>
+            </div>
+            <div class="flex-x__item card">
+                <p class="emoji card__item">🌸</p>
+                <h3 class="title card__title card__item">Modern & beautiful landing page</h3>
+                <p class="description card__description card__item">Suspendisse id tortor venenatis, blandit lacus ut,
+                    efficitur diam. Proin vulputate nisl vel sem consequat euismod.</p>
+            </div>
+            <div class="flex-x__item card">
+                <p class="emoji card__item">⚙️</p>
+                <h3 class="title card__title card__item">Built in multiple ways</h3>
+                <p class="description card__description card__item">Suspendisse id tortor venenatis, blandit lacus ut,
+                    efficitur diam. Proin vulputate nisl vel sem consequat euismod.</p>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature flex-x">
+            <picture class="feature__picture feature__item">
+                <source srcset="resources/images/section-1.avif 343w, resources/images/section-1@2x.avif 457w"
+                    type="image/avif">
+                <source srcset="resources/images/section-1.webp 343w, resources/images/section-1@2x.webp 457w"
+                    type="image/webp">
+                <source srcset="resources/images/section-1.png 343w, resources/images/section-1@2x.png 457w"
+                    type="image/png">
+                <img class="feature__img" src="resources/images/section-1.png" alt="">
+            </picture>
+            <div class="feature__text feature__item">
+                <p class="emoji feature__emoji feature__text__item">🎨</p>
+                <h2 class="title feature__title feature__text__item">200+ cloneable components</h2>
+                <p>From navigation bars to modals, buttons to forms, our library has everything you need to jumpstart
+                    your development process.</p>
+                <ul class="feature__list feature__text__item">
+                    <li class="feature__list__item">Rapidly build your own design system</li>
+                    <li class="feature__list__item">Maintain consistancy across your website</li>
+                    <li class="feature__list__item">Save hours in production time</li>
+                </ul>
+            </div>
+        </div>
+        <div class="feature flex-x reverse">
+            <picture class="feature__picture feature__item">
+                <source srcset="resources/images/section-2.avif 342w, resources/images/section-2@2x.avif 455w"
+                    type="image/avif">
+                <source srcset="resources/images/section-2.webp 342w, resources/images/section-2@2x.webp 455w"
+                    type="image/webp">
+                <source srcset="resources/images/section-2.png 342w, resources/images/section-2@2x.png 455w"
+                    type="image/png">
+                <img class="feature__img" src="resources/images/section-2.png" alt="">
+            </picture>
+            <div class="feature__text feature__item">
+                <p class="emoji feature__emoji feature__text__item">🎯</p>
+                <h2 class="title feature__title feature__text__item">Complete style guild for projects</h2>
+                <p>A comprehensive style guide can make all the difference in creating a cohesive and effective design.
+                </p>
+                <ul class="feature__list feature__text__item">
+                    <li class="feature__list__item">Determine the key elements of your brand</li>
+                    <li class="feature__list__item">Include guidelines for layout</li>
+                    <li class="feature__list__item">Share your style guide with your team</li>
+                </ul>
+            </div>
+        </div>
+        <div class="feature flex-x">
+            <picture class="feature__picture feature__item">
+                <source srcset="resources/images/section-3.avif 300w, resources/images/section-3@2x.avif 400w"
+                    type="image/avif">
+                <source srcset="resources/images/section-3.webp 300w, resources/images/section-3@2x.webp 400w"
+                    type="image/webp">
+                <source srcset="resources/images/section-3.png 300w, resources/images/section-3@2x.png 400w"
+                    type="image/png">
+                <img class="feature__img" src="resources/images/section-3.png" alt="">
+            </picture>
+            <div class="feature__text feature__item">
+                <p class="emoji feature__emoji feature__text__item">⚙️</p>
+                <h2 class="title feature__title feature__text__item">Built in multiple ways</h2>
+                <p>Our approach to content creation allows you to build your content in multiple ways, maximizing your
+                    efficiency and output.</p>
+                <ul class="feature__list feature__text__item">
+                    <li class="feature__list__item">Identify the core message of your content</li>
+                    <li class="feature__list__item">Create a content calendar</li>
+                    <li class="feature__list__item">Repurpose your content by adapting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__text">
+            <h2>Always with the legendary customer experience.</h2>
+            <nav class="footer__navigation">
+                <ul class="navigation__list">
+                    <li class="footer__navigation__item">Overview</li>
+                    <li class="footer__navigation__item">Glossary</li>
+                    <li class="footer__navigation__item">FAQ</li>
+                    <li class="footer__navigation__item">Style Guide</li>
+                    <li class="footer__navigation__item">Colours</li>
+                    <li class="footer__navigation__item">Typography</li>
+                    <li class="footer__navigation__item">Shadow</li>
+                    <li class="footer__navigation__item">Avatar</li>
+                    <li class="footer__navigation__item">Buttons</li>
+                </ul>
+            </nav>
+        </div>
+        <img src="resources/logo/full-logo.svg" alt="Hufie logo">
+    </footer>
+</body>
+
+</html>
