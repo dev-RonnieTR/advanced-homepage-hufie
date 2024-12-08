@@ -1,59 +1,83 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --font-size-small: 0.875rem;
-    --font-size-regular: 1rem;
-    --font-size-medium: 1.25rem;
-    --font-size-large: 2.25rem;
-    --font-size-extralarge: 4rem;
-    --color-1: #295E48;
-    --color-2: #F6F7FB;
-    --color-3: #364153;
-    --color-4: #C9D0DA;
-    --color-5: #6281F7;
-    --color-6: #161739;
-    --color-7: #161739;
-    --color-8: #6D4AE5;
-    --color-9: #263FA9;
-    --color-10: #3C4C98;
-    --color-11: #DEE9FC;
-    --color-12: #F5C044;
+  --font-size-small: 0.875rem;
+  --font-size-regular: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-large: 2.25rem;
+  --font-size-extralarge: 4rem;
+  --color-1: #295e48;
+  --color-2: #f6f7fb;
+  --color-3: #364153;
+  --color-4: #c9d0da;
+  --color-5: #6281f7;
+  --color-6: #161739;
+  --color-7: #161739;
+  --color-8: #6d4ae5;
+  --color-9: #263fa9;
+  --color-10: #3c4c98;
+  --color-11: #dee9fc;
+  --color-12: #f5c044;
+  --spacing-horizontal: 1.5rem;
+  --spacing-vertical: 1rem;
 }
 
 html {
-    font-family: "Sora", sans-serif;
-    font-optical-sizing: auto;
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
 }
 
 /* HERO LAYOUT*/
 .hero-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-vertical) 5%;
 }
 .header__buttons {
-    border: 1px solid pink;
-    display: flex;
+  border: 1px solid pink;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-horizontal);
 }
 
 /* MODULES */
-picture, img {
-    display: block;
+picture,
+img {
+  display: block;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+/* Button design */
+.button-1 {
+  background-color: var(--color-1);
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
 }
 
 /* TYPOGRAPHY */
 .hero__title {
-    color: var(--color-3);
-    font-size: var(--font-size-extralarge);
+  color: var(--color-3);
+  font-size: var(--font-size-extralarge);
 }
 .hero__description {
-    color: var(--color-3);
-    font-size: var(--font-size-medium);
+  color: var(--color-3);
+  font-size: var(--font-size-medium);
+}
+.button {
+  font-size: var(--font-size-regular);
+}
+.button-1 {
+  color: var(--color-2);
+}
+.button-2 {
+  color: var(--color-3);
+  font-weight: 600;
 }
