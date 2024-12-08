@@ -33,3 +33,17 @@ html {
 picture, img {
     display: block;
 }
+a {
+    text-decoration: none;
+}
+
+/* TYPOGRAPHY */
+.hero__title {
+    color: var(--color-3);
+    font-size: var(--font-size-extralarge);
+}
+.hero__description {
+    border: 1px solid pink;
+    color: var(--color-3);
+    font-size: var(--font-size-medium);
+}
