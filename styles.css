@@ -29,6 +29,17 @@ html {
     font-optical-sizing: auto;
 }
 
+/* HERO LAYOUT*/
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__buttons {
+    border: 1px solid pink;
+    display: flex;
+}
+
 /* MODULES */
 picture, img {
     display: block;
@@ -43,7 +54,6 @@ a {
     font-size: var(--font-size-extralarge);
 }
 .hero__description {
-    border: 1px solid pink;
     color: var(--color-3);
     font-size: var(--font-size-medium);
 }
