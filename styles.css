@@ -12,13 +12,13 @@
   --font-size-medium: 1.25rem;
   --font-size-large: 2.25rem;
   --font-size-extralarge: 4rem;
-  --color-1: #295e48;
+  --color-1: #5db082;
   --color-2: #f6f7fb;
   --color-3: #364153;
   --color-4: #c9d0da;
   --color-5: #6281f7;
   --color-6: #161739;
-  --color-7: #161739;
+  --color-7: #295e48;
   --color-8: #6d4ae5;
   --color-9: #263fa9;
   --color-10: #3c4c98;
@@ -77,6 +77,59 @@ html {
   height: auto;
 }
 
+/* PROCESS SECTION LAYOUT */
+.process {
+  min-height: 740px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-6);
+}
+.process__background,
+.process__background__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.process__header {
+  margin: 5rem;
+}
+.process__title {
+  width: min(100%, 11em);
+  margin: 0 auto 1rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "a b c d";
+
+  position: relative;
+}
+.card-1 {
+  grid-area: a;
+}
+.card-2 {
+  grid-area: b;
+}
+.card-3 {
+  grid-area: c;
+}
+.card-4 {
+  grid-area: d;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.card__title {
+  width: min(100%, 10em);
+}
+.card__description {
+  width: min(100%, 17em);
+}
+
 /* MODULES */
 picture,
 img {
@@ -87,27 +140,67 @@ a {
 }
 /* Button design */
 .button-1 {
-  background-color: var(--color-1);
+  background-color: var(--color-7);
   border-radius: 2rem;
   padding: 1rem 1.5rem;
 }
+/* Emoji design */
+.emoji {
+  font-size: var(--font-size-large);
+  width: 3em;
+  height: 3em;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emoji-palette {
+  background-color: var(--color-5);
+}
+.emoji-target {
+  background-color: var(--color-12);
+}
+.emoji-flower {
+  background-color: var(--color-1);
+}
+.emoji-cog {
+  background-color: var(--color-8);
+}
 
 /* TYPOGRAPHY */
-.hero__title {
-  color: var(--color-3);
-  font-size: var(--font-size-extralarge);
-}
-.hero__description {
-  color: var(--color-3);
-  font-size: var(--font-size-medium);
-}
-.button {
-  font-size: var(--font-size-regular);
-}
-.button-1 {
-  color: var(--color-2);
-}
+.hero__title,
+.hero__description,
 .button-2 {
   color: var(--color-3);
-  font-weight: 600;
+}
+.hero__title {
+  font-size: var(--font-size-extralarge);
+}
+.process__title {
+  font-size: var(--font-size-large);
+}
+.description {
+  font-size: var(--font-size-medium);
+}
+.button,
+.card__description {
+  font-size: var(--font-size-regular);
+}
+.button-1,
+.process__title,
+.card__title {
+  color: var(--color-2);
+}
+.process__description,
+.card__description {
+  color: var(--color-4);
+  font-weight: 200;
+}
+.process__title,
+.card__title,
+.button-2 {
+  font-weight: 500;
+}
+.process {
+  text-align: center;
 }
