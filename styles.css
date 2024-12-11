@@ -29,6 +29,7 @@
   --hero-spacing: 2rem;
   --hero-img-width: 41rem;
   --feature-img-width: 28.5625rem;
+  --background-image-height: 740px;
 }
 
 html {
@@ -72,6 +73,7 @@ html {
 }
 .hero__picture {
   max-width: var(--hero-img-width);
+  flex-shrink: 0.66;
 }
 .hero__img {
   width: min(100%, var(--hero-img-width));
@@ -80,18 +82,16 @@ html {
 
 /* PROCESS SECTION LAYOUT */
 .process {
-  min-height: 740px;
-  position: relative;
+  min-height: var(--background-image-height);
   overflow: hidden;
   background-color: var(--color-6);
-  background-image: image-set(
-    url("resources/background/section_bg_1.avif") type("image/avif"),
-    url("resources/background/section_bg_1.webp") type("image/webp"),
-    url("resources/background/section_bg_1.png") type("image/png")
-  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 5rem 0;
 }
 .process__header {
-  margin: 5rem;
+  margin-bottom: 5rem;
 }
 .process__title {
   width: min(100%, 11em);
@@ -127,7 +127,7 @@ html {
   width: min(100%, 10em);
 }
 .card__description {
-  width: min(100%, 17em);
+  width: 17em;
 }
 
 /* FEATURES SECTION LAYOUT */
@@ -135,17 +135,17 @@ html {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  padding: 5rem 10%;
 }
 .feature {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 4rem;
 }
 .feature__picture {
-  flex: 0 0 var(--feature-img-width);
+  max-width: var(--feature-img-width);
 }
 .feature__img {
   width: 100%;
@@ -170,13 +170,14 @@ html {
 .feature__list__item::before {
   content: "✅";
   font-size: 1rem;
-  width: 1em;
-  height: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
   overflow: hidden;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
 }
 
 /* FOOTER LAYOUT */
@@ -193,15 +194,16 @@ footer {
   width: min(100%, 1280px);
 }
 .footer__title {
-  width: 32rem;
+  width: min(100%, 32rem);
 }
 .navigation__list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 3rem);
   grid-auto-flow: column;
-  gap: 1rem 5rem;
+  align-items: center;
+  gap: 0 5rem;
 }
 
 /* MODULES */
@@ -294,4 +296,99 @@ footer {
 }
 .process {
   text-align: center;
+}
+
+@media (min-width: 1101px) {
+  .process {
+    background-image: image-set(
+      url("resources/background/section_bg_1.avif") type("image/avif"),
+      url("resources/background/section_bg_1.webp") type("image/webp"),
+      url("resources/background/section_bg_1.png") type("image/png")
+    );
+  }
+}
+
+@media (max-width: 1100px) {
+  .process {
+    padding: 5rem 2%;
+    background-image: image-set(
+      url("resources/background/section_bg_2.avif") type("image/avif"),
+      url("resources/background/section_bg_2.webp") type("image/webp"),
+      url("resources/background/section_bg_2.png") type("image/png")
+    );
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "a b"
+      "c d";
+    gap: 2rem;
+  }
+  .card__description {
+    width: min(100%, 27em);
+  }
+}
+
+@media (max-width: 850px) {
+  :root {
+    --font-size-extralarge: 3rem; 
+  }
+  .hero__picture {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: -10px;
+  }
+  .hero__content {
+    margin-left: 0;
+  }
+  .hero__content__text {
+    padding: 3rem 3%;
+  }
+  .feature {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: clamp(13px, 4vw, 16px);
+  }
+  .cards {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+    gap: 2rem;
+  }
+  .card__description {
+    width: 95%;
+  }
+
+  .footer__text {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .navigation__list {
+    gap: 0 1rem
+  }
+}
+
+@media (max-width: 320px) {
+:root {
+  --font-size-large: 2rem;
+}
+.hero-header {
+  flex-direction: column;
+  gap: 1rem;
+}
+  .hero__content__buttons {
+  flex-direction: column;
+}
+
 }
