@@ -299,8 +299,20 @@ footer {
 }
 
 @media (min-width: 1280px) {
+  .hero__content {
+    margin-left: 5%;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .hero__content__text {
+    margin-top: min(25vw, 250px)
+  }
+  
   html {
-    font-size: clamp(16px, 1.25vw, 20px);
+    font-size: clamp(16px, 1.25vw, 20px)
   }
 }
 
