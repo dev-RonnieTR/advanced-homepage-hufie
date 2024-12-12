@@ -298,6 +298,12 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 1280px) {
+  html {
+    font-size: clamp(16px, 1.25vw, 20px);
+  }
+}
+
 @media (min-width: 1101px) {
   .process {
     background-image: image-set(
